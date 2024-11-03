@@ -1,6 +1,6 @@
 "use client"
 import generateMemoryMatrix from "@/app/lib/Matrixarraygen"
-import Matrix from "../MatrixComp/Matrix"
+import Matrix from "../../components/MatrixComp/Matrix"
 import { useEffect, useRef, useState } from "react"
 
 

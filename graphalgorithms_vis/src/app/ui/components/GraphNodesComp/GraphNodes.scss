@@ -1,0 +1,32 @@
+#graph-container {
+    position: relative;
+    width: 40rem;
+    height: 360px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.node {
+    position: absolute;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.edge {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #555;
+    transform-origin: 0 0;
+}

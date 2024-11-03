@@ -1,6 +1,6 @@
 "use client"
 import generateMemoryMatrix from "@/app/lib/Matrixarraygen"
-import Matrix from "../MatrixComp/Matrix"
+import Matrix from "../../components/MatrixComp/Matrix"
 import { useEffect, useRef, useState } from "react"
 
 
@@ -59,6 +59,8 @@ export default function PathFindingBFS({size}) {
             
             let currentItem = iteratePath.shift()
             console.log(currentItem)
+
+            if (!currentItem) break
             
 
             if (matrix[currentItem[0]][currentItem[1]] == 1) {
