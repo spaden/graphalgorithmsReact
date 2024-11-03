@@ -6,7 +6,7 @@ import PathFindingDFS from "./ui/DFS/simplepathdfs";
 export default function Home() {
   return (
     <div className={styles.page}>
-        <PathFindingDFS size={8}/>
+        <PathFindingDFS size={4}/>
     </div>
   );
 }
