@@ -94,7 +94,6 @@ export default function PathFindingDFS({size}) {
             <Matrix size={size} />
             <br /> <br />
 
-
             <button onClick={() => setAbort(true)}>Abort</button>
         </>
     )
