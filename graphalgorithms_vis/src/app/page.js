@@ -9,7 +9,7 @@ import GraphNodesComponent from "./ui/components/GraphNodesComp/GraphNodes";
 export default function Home() {
   return (
     <div className={styles.page}>
-        <PathFindingBFS size={8} />
+        <GraphNodesComponent size={8} />
     </div>
   );
 }

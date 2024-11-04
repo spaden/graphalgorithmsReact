@@ -2,13 +2,7 @@
 import generateMemoryMatrix from "@/app/lib/Matrixarraygen"
 import Matrix from "../../components/MatrixComp/Matrix"
 import { useEffect, useRef, useState } from "react"
-
-
-
-function sleep(milliseconds) {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
+import sleep from "@/app/lib/sleepUtil"
 
 export default function PathFindingDFS({size}) {
 
