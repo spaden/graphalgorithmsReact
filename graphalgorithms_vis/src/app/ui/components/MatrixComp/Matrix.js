@@ -20,7 +20,7 @@ export default function Matrix({size}) {
 
 
     return (<>
-            <div className={`matrix__size__${size}`}>
+            <div className={`matrix matrix__size matrix__size__${size}`}>
                 {generateMatrix()}
             </div>
     </>);

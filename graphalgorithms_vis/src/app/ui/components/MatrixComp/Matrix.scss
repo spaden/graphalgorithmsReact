@@ -1,4 +1,6 @@
 .matrix {
+    width: fit-content;
+    height: fit-content;
     &__cell {
         display: block;
         height: 4rem;
