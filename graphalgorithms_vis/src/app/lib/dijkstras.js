@@ -21,14 +21,14 @@ export default async function dijkstras(refEdges, disArray, vis, mnEdg) {
         vis[x] = true
 
         const currentNode = document.getElementById(`node__${Number(x)+1}`)
-        currentNode.style.backgroundColor = "red"
+        currentNode.style.backgroundColor = "blue"
         await sleep(500)
 
         let prevEdge = mnEdg[Number(x)]
         
         if (prevEdge != false) {
             prevEdge = document.getElementById(prevEdge)
-            prevEdge.style.backgroundColor = 'red'
+            prevEdge.style.backgroundColor = 'blue'
         }
 
         const mat = refEdges[`${Number(x)+1}`]

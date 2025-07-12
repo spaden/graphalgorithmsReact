@@ -3,6 +3,9 @@ import generateMemoryMatrix from "@/app/lib/Matrixarraygen"
 import Matrix from "../../components/MatrixComp/Matrix"
 import { useEffect, useRef, useState } from "react"
 import sleep from "@/app/lib/sleepUtil"
+import Link from 'next/link';
+import styles from "../../../page.module.css";
+
 
 export default function PathFindingBFS({size}) {
 
@@ -91,10 +94,13 @@ export default function PathFindingBFS({size}) {
     return (
         <>
             <Matrix size={size} />
-            <br /> <br />
+            <br />
 
             <button onClick={() => setAbort(true)}>Abort</button>
-        </>
+
+            <br></br>
+            <div className={styles.divLink}><a className={styles.link} href="/DFS">Go to DFS</a><a className={styles.link} href="/">Go to Dijkstras</a></div>
+            </>
     )
 
 }
