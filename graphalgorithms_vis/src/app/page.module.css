@@ -12,3 +12,15 @@
   height: 95vh;
 }
 
+.divLink {
+
+}
+
+.link {
+  height: fit-content;
+  width: fit-content;
+  display: inline-block;
+  margin-left: 20px;
+  color: blue;
+}
+

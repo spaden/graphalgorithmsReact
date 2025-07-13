@@ -108,7 +108,7 @@ export default function GraphNodesComponent(size) {
             container.appendChild(nodeElement)
         })
 
-        function drawEdge(x1, y1, x2, y2, id) {
+        function drawEdge(x1, y1, x2, y2, id, edgeObjRef) {
             const edge = document.createElement('div')
             edge.className = 'edge'
             edge.id = `edge_${id}`
@@ -120,6 +120,18 @@ export default function GraphNodesComponent(size) {
             edge.style.left = `${x1}px`
             edge.style.top = `${y1}px`
             edge.style.transform = `rotate(${angle}deg)`
+
+            const weightElement = document.createElement('div')
+            weightElement.style.zIndex=25
+
+            const refEdgeObj = refEdges['' + edgeObjRef.from]
+
+
+            weightElement.innerHTML = refEdgeObj['' + edgeObjRef.to][0]
+            weightElement.className ='weightElement'
+            weightElement.style.left = '40%'
+            weightElement.style.top = `5px`
+            edge.appendChild(weightElement)
             
             container.appendChild(edge)
         }
@@ -129,7 +141,7 @@ export default function GraphNodesComponent(size) {
             const toNode = nodes.find(node => node.id === edge.to)
             
             if (fromNode && toNode) {
-                drawEdge(fromNode.x + 15, fromNode.y + 15, toNode.x + 15, toNode.y + 15, `${edge.from}_${edge.to}`)
+                drawEdge(fromNode.x + 15, fromNode.y + 15, toNode.x + 15, toNode.y + 15, `${edge.from}_${edge.to}`, edge)
             }
         })
 
